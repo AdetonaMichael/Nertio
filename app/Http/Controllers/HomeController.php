@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers;
 use Inertia\Inertia;
+use Carbon\Carbon;
 
 class HomeController extends Controller{
     public function users(){
          $users = ['Michael','James','John','Philip','Samson'];
-         return inertia::render('Users', ['users'=> $users]);
+         $apps = ['Mobile', 'Cloud','serverlet','web','blockchain'];
+         return inertia::render('Users', [
+            'users'=>$users,
+            'applications'=>$apps
+        ]);
     }
 
     public function jobs(){

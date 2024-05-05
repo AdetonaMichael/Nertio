@@ -16,5 +16,5 @@ Route::get('/users', [HomeController::class,'users']);
 Route::get('/jobs', [HomeController::class,'jobs']);
 Route::get('/apps', [HomeController::class,'apps']);
 Route::post('/logout', function(){
-    
-})
+    dd("Logging the user Out...");
+});
